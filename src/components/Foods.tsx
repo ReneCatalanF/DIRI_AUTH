@@ -2,15 +2,15 @@ import { MenuItem } from '../entites/entities';
 import './Foods.css'
 import FoodOrder from './FoodOrder'
 import ima from '../images/Hamburg.jpg';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import ErrorBoundary from '../services/ErrorBoundaries'
 import logger from '../services/logging';
+import { foodItemsContext } from '../App';
 
-interface FoodsProps {
-    foodItems: MenuItem[];
-}
-function Foods(props: FoodsProps) {
 
+function Foods() {
+
+    const foodItems = useContext(foodItemsContext);
 
     const [foodOrder, setfoodOrder] = useState(false);
     const [foodSelect, setfoodSelect] = useState<MenuItem>();
@@ -30,7 +30,7 @@ function Foods(props: FoodsProps) {
                 <>
                     <h4 className="foodTitle">Choose from our Menu</h4>
                     <ul className="ulFoods">
-                        {props.foodItems.map((item) => {
+                        {foodItems.map((item) => {
                             return (
                                 <li key={item.id} className="liFoods"
                                     onClick={() =>

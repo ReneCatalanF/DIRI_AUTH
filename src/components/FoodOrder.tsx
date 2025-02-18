@@ -5,8 +5,8 @@ import './FoorOrder.css';
 import ima from '../images/Hamburg.jpg';
 import logger from "../services/logging";
 import fetchData from "../services/FetchTime";
-import { db } from "../services/FirebaseStorage";
-import { push, ref } from "firebase/database";
+import { app } from "../services/FirebaseStorage";
+import { getDatabase, push, ref } from "firebase/database";
 
 interface FoodOrderProps {
     food: MenuItem;
@@ -99,7 +99,7 @@ function FoodOrder(props: FoodOrderProps) {
 
         if (pedido) {
             console.log("Pedido listo para enviar:", pedido);
-            const itemsRef = ref(db, "pedidos");
+            const itemsRef = ref(getDatabase(app), "pedidos");
             await push(itemsRef, pedido);
             //logger.info("Aqui esta el nuevo pedido: " + pedido.id_menu + " " + pedido.nombre_menu + " " + pedido.fecha + " " + pedido.cantidad + " " + pedido.precio_total);
         }

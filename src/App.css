@@ -74,3 +74,58 @@ body {
 .liApp p:last-child {
   color: #4CAF50; /* Verde */
 }
+
+/* Estilos generales del navbar */
+.navbar {
+  background-color: #f0f0f0; /* Color de fondo del navbar */
+  padding: 1rem; /* Espacio interno alrededor del contenido */
+  display: flex; /* Para alinear los elementos horizontalmente */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.nav-menu {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Para alinear los elementos horizontalmente */
+}
+
+.nav-menu li {
+  margin-left: 1rem; /* Espacio entre los elementos de la lista */
+}
+
+.nav-menu a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #333; /* Color del texto */
+  font-weight: 500; /* Peso de la fuente */
+  padding: 0.5rem 1rem; /* Espacio interno alrededor del texto del enlace */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.nav-menu a:hover {
+  background-color: #ddd; /* Color de fondo al pasar el ratón */
+  color: #007bff; /* Color del texto al pasar el ratón (azul de Bootstrap) */
+}
+
+.nav-menu button {
+  background-color: #007bff; /* Color de fondo del botón (azul de Bootstrap) */
+  color: white; /* Color del texto del botón */
+  border: none; /* Elimina los bordes del botón */
+  padding: 0.5rem 1rem; /* Espacio interno alrededor del texto del botón */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.nav-menu button:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el ratón (azul más oscuro) */
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+  padding: 2rem; /* Espacio interno alrededor del contenido principal */
+  flex: 1; /* Para que el contenido principal ocupe el espacio disponible */
+}
